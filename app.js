@@ -109,6 +109,8 @@ function janken(id) {
                 emptySvg.removeChild(document.querySelector('#emptySvg path'));
                 yourChoice.removeChild(document.querySelector('#yourChoice path'));
                 phaseOne.removeChild(document.getElementById('remove'));
+                circleOne.classList.remove('ciseauxOne', 'pierreOne', 'feuilleOne');
+                divBot.classList.remove('ciseauxOne', 'pierreOne', 'feuilleOne')
                 phaseOne.style.transform = 'translateX(0%)';
                 phaseChoix.style.transform = 'translateX(0%)';
             })
