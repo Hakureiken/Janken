@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap');
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.mr75 {
+    margin-right: 75px;
+}
+
+.ml75 {
+    margin-left: 75px;
+}
+
+.w16 {
+    width: 16%;
+}
+
+body {
+    height: 100vh;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    background: radial-gradient(circle at top, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 3%;
+}
+
+/* design recap */
+
+.recapScore {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    height: 175px;
+    padding: 1.5%;
+    font-weight: bold;
+    border: 2px solid hsl(217, 16%, 45%);
+    border-radius: 15px;
+}
+
+.nameOfMove {
+    font-size: 2em;
+    color: white;
+}
+
+.score {
+    padding: 1.5% 6%;
+    background: white;
+    text-align: center;
+    border-radius: 10px;
+    line-height: 40px;
+    width: 180px;
+}
+
+.score span:first-child {
+    color: hsl(229, 64%, 46%);
+}
+
+.score span:last-child {
+    font-size: 4em;
+    color: #58556a;
+}
+
+/* design choix janken */
+
+.choixJanken {
+    width: 100%;
+    height: 100%;
+    padding-top: 70px;
+    overflow-x: hidden;
+    display: flex;
+}
+
+.circle {
+    background: rgb(228, 226, 226);
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: solid 20px;
+    position: relative;
+}
+
+.feuille {
+    box-shadow: 0 8px 0 20px #2a45c1, inset 0 10px 0 0 rgb(199, 199, 199);
+    margin-left: calc(50% - 75px - 150px);
+    margin-right: 75px;
+    outline-color: #4f6bf3;
+}
+
+.feuille::before {
+    content: "";
+    position: absolute;
+    width: 150%;
+    height: 18px;
+    left: 85%;
+    background: #17223e;
+    z-index: -1;
+}
+
+.ciseaux {
+    box-shadow: 0 8px 0 20px #c76c1d, inset 0 10px 0 0 rgb(199, 199, 199);
+    outline-color: #eda524;
+    margin-right: calc(50% - 75px - 150px);
+    margin-left: 75px;
+}
+
+.pierre {
+    box-shadow: 0 8px 0 20px #9e1535, inset 0 10px 0 0 rgb(199, 199, 199);
+    outline-color: #df405e;
+    justify-self: center;
+}
+
+.pierre::before {
+    content: "";
+    position: absolute;
+    width: 150%;
+    height: 18px;
+    transform: rotateZ(60deg) translateX(-80%);
+    background: #17223e;
+    z-index: -1;
+}
+
+.pierre::after {
+    content: "";
+    position: absolute;
+    width: 150%;
+    height: 18px;
+    transform: rotateZ(-60deg) translateX(80%);
+    background: #17223e;
+    z-index: -1;
+}
+
+/* design des différentes phase */
+
+h3 {
+    color: white;
+    font-size: 1.5em;
+    letter-spacing: 4px;
+}
+
+#phaseChoix,
+#phaseOne,
+#phaseTwo,
+#phaseEnd {
+    min-width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#phaseOne>div {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ciseauxOne {
+    box-shadow: 0 8px 0 20px #c76c1d, inset 0 10px 0 0 rgb(199, 199, 199);
+    outline-color: #eda524;
+    margin: auto;
+}
+
+.pierreOne {
+    box-shadow: 0 8px 0 20px #9e1535, inset 0 10px 0 0 rgb(199, 199, 199);
+    margin: auto;
+    outline-color: #df405e;
+}
+
+.feuilleOne {
+
+    box-shadow: 0 8px 0 20px #2a45c1, inset 0 10px 0 0 rgb(199, 199, 199);
+    margin: auto;
+    outline-color: #4f6bf3;
+}
+
+.scale {
+    transform: scale(1.5);
+}
+
+.empty {
+    width: 150px;
+    height: 150px;
+    transform: scale(1.5);
+    background-color: #182341;
+    border-radius: 50%;
+    margin: auto;
+}
+
+.shadowsWin {
+    box-shadow: 0px 0px 0px 60px rgba(253, 252, 252, 0.15), 0 0 0 100px rgba(255, 255, 255, 0.1),0 0 0 140px rgba(255, 255, 255, 0.05);
+}
+
+button {
+    width: 100%;
+    height: 70px;
+    border: none;
+    align-self: center;
+    border-radius: 20px;
+    cursor: pointer;
+    color: #9e1535;
+    font-size: 2em;
+}
+
+h2 {
+    color: white;
+    font-size: 4em;
+}
+
+#phaseOne>div:nth-child(2) {
+    justify-content: center;
+    line-height: 77px;
+}
