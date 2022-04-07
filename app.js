@@ -99,7 +99,7 @@ function janken(id) {
             // on va créer et intégrer le boutton "replay" et tout ce qui sera lié à ce bouton
 
             let divBot = document.getElementById('divBot');
-            divBot.insertAdjacentHTML('beforebegin', '');
+            divBot.insertAdjacentHTML('beforebegin', '<div id="remove"><button>Play again</button></div>');
             // on va reset certains paramètre si on veut rejouer (des classes à remove etc)
             document.querySelector('button').addEventListener('click', function reset() {
                 circleOne.classList.remove('shadowsWin');
@@ -108,6 +108,7 @@ function janken(id) {
 
                 emptySvg.removeChild(document.querySelector('#emptySvg path'));
                 yourChoice.removeChild(document.querySelector('#yourChoice path'));
+                phaseOne.removeChild(document.getElementById('remove'));
                 phaseOne.style.transform = 'translateX(0%)';
                 phaseChoix.style.transform = 'translateX(0%)';
             })
